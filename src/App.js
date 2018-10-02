@@ -16,6 +16,7 @@ class App extends Component {
       country: undefined,
       dayOne: {
         icon: '',
+        date: '',
         temp: '',
         humidity: '',
         description: ''
@@ -59,6 +60,7 @@ class App extends Component {
       country: data.city.country,
       dayOne: {
         icon: data.list[0].weather[0].icon,
+        date: data.list[0].dt_txt,
         temp: data.list[0].main.temp,
         humidity: data.list[0].main.humidity,
         description: data.list[0].weather[0].description
