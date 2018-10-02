@@ -14,11 +14,36 @@ class App extends Component {
     this.state = {
       city: undefined,
       country: undefined,
-      dayOne: [],
-      dayTwo: [],
-      dayThree: [],
-      dayFour: [],
-      dayFive: [],
+      dayOne: {
+        icon: '',
+        temp: '',
+        humidity: '',
+        description: ''
+      },
+      dayTwo: {
+        icon: '',
+        temp: '',
+        humidity: '',
+        description: ''
+      },
+      dayThree: {
+        icon: '',
+        temp: '',
+        humidity: '',
+        description: ''
+      },
+      dayFour: {
+        icon: '',
+        temp: '',
+        humidity: '',
+        description: ''
+      },
+      dayFive: {
+        icon: '',
+        temp: '',
+        humidity: '',
+        description: ''
+      },
       error: undefined
     }
   }
@@ -32,14 +57,36 @@ class App extends Component {
     this.setState({
       city: data.city.name,
       country: data.city.country,
-      dayOne: [{
-        day: data.list[0],
-        icon: data.list[0].weather[0].icon
-      }],
-      dayTwo: data.list[7],
-      dayThree: data.list[15],
-      dayFour: data.list[23],
-      dayFive: data.list[31],
+      dayOne: {
+        icon: data.list[0].weather[0].icon,
+        temp: data.list[0].main.temp,
+        humidity: data.list[0].main.humidity,
+        description: data.list[0].weather[0].description
+      },
+      dayTwo: {
+        icon: data.list[7].weather[0].icon,
+        temp: data.list[7].main.temp,
+        humidity: data.list[7].main.humidity,
+        description: data.list[7].weather[0].description
+      },
+      dayThree: {
+        icon: data.list[15].weather[0].icon,
+        temp: data.list[15].main.temp,
+        humidity: data.list[15].main.humidity,
+        description: data.list[15].weather[0].description
+      },
+      dayFour: {
+        icon: data.list[23].weather[0].icon,
+        temp: data.list[23].main.temp,
+        humidity: data.list[23].main.humidity,
+        description: data.list[23].weather[0].description
+      },
+      dayFive: {
+        icon: data.list[31].weather[0].icon,
+        temp: data.list[31].main.temp,
+        humidity: data.list[31].main.humidity,
+        description: data.list[31].weather[0].description
+      },
       error: '',
     })
   }
