@@ -21,24 +21,28 @@ class App extends Component {
       },
       dayTwo: {
         icon: '',
+        date: '',
         temp: '',
         humidity: '',
         description: ''
       },
       dayThree: {
         icon: '',
+        date: '',
         temp: '',
         humidity: '',
         description: ''
       },
       dayFour: {
         icon: '',
+        date: '',
         temp: '',
         humidity: '',
         description: ''
       },
       dayFive: {
         icon: '',
+        date: '',
         temp: '',
         humidity: '',
         description: ''
@@ -65,24 +69,28 @@ class App extends Component {
       },
       dayTwo: {
         icon: data.list[7].weather[0].icon,
+        date: data.list[7].dt_txt,
         temp: data.list[7].main.temp,
         humidity: data.list[7].main.humidity,
         description: data.list[7].weather[0].description
       },
       dayThree: {
         icon: data.list[15].weather[0].icon,
+        date: data.list[15].dt_txt,
         temp: data.list[15].main.temp,
         humidity: data.list[15].main.humidity,
         description: data.list[15].weather[0].description
       },
       dayFour: {
         icon: data.list[23].weather[0].icon,
+        date: data.list[23].dt_txt,
         temp: data.list[23].main.temp,
         humidity: data.list[23].main.humidity,
         description: data.list[23].weather[0].description
       },
       dayFive: {
         icon: data.list[31].weather[0].icon,
+        date: data.list[31].dt_txt,
         temp: data.list[31].main.temp,
         humidity: data.list[31].main.humidity,
         description: data.list[31].weather[0].description
@@ -94,36 +102,27 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="main">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-6 headers-container">
-                <Headers />
+        <div className="wrapper">
+          <div className="main">
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-4 headers-container">
+                  <Headers />
+                </div>
+                <div className="col-xs-8 fiveDayForecastInput-container">
+                  <WeatherInputForm fiveDayForecast={this.fiveDayForecast} />
+                  <WeatherForecast
+                    city={this.state.city}
+                    country={this.state.country}
+                    dayOne={this.state.dayOne}
+                    dayTwo={this.state.dayTwo}
+                    dayThree={this.state.dayThree}
+                    dayFour={this.state.dayFour}
+                    dayFive={this.state.dayFive}
+                    error={this.state.error}
+                  />
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-10 fiveDayForecastInput-container">
-              <WeatherInputForm fiveDayForecast={this.fiveDayForecast} />
-            </div>
-          </div>
-        </div><br />
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-10 weatherForecast-container">
-              <WeatherForecast
-                city={this.state.city}
-                country={this.state.country}
-                dayOne={this.state.dayOne}
-                dayTwo={this.state.dayTwo}
-                dayThree={this.state.dayThree}
-                dayFour={this.state.dayFour}
-                dayFive={this.state.dayFive}
-                error={this.state.error}
-              />
             </div>
           </div>
         </div>

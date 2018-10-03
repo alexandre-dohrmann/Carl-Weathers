@@ -9,12 +9,6 @@ const Headers = (props) => {
                 <div className="sub-header">
                     <small className="sub-header"> (so you don't have to)</small>
                 </div><br />
-                <div className="carl-intro-div">
-                    <div className="carl-name">
-                        <h4 className="carl-intro">Hi.<br />I'm Carl.</h4>
-                        <img className="carl-owl" src="../images/Carl.png" />
-                    </div>
-                </div>
             </div>
         </div>
     )
