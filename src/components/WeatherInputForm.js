@@ -15,7 +15,4 @@ const WeatherInputForm = (props) => {
     )
 }
 
-
-
-
 export default WeatherInputForm;

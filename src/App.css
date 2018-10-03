@@ -134,6 +134,8 @@ button {
 
 
 .weather-item {
+    box-shadow: 2px 2px 4px 0 black;
+    box-sizing: border-box;
     font-family: 'Atma', cursive;
     background: white;
     box-sizing: border-box;

@@ -1,24 +1,26 @@
 import React from 'react';
 
-
-
 const WeatherForecast = (props) => {
+    // Creating Icon Variables for each of the icon codes for each day.
     const iconD1 = props.dayOne.icon;
     const iconD2 = props.dayTwo.icon;
     const iconD3 = props.dayThree.icon;
     const iconD4 = props.dayFour.icon;
     const iconD5 = props.dayFive.icon;
 
+    // Creating Icon URL Variables for each of the icon variables for each day.
     const iconURL1 = `http://openweathermap.org/img/w/${iconD1}.png`
     const iconURL2 = `http://openweathermap.org/img/w/${iconD2}.png`
     const iconURL3 = `http://openweathermap.org/img/w/${iconD3}.png`
     const iconURL4 = `http://openweathermap.org/img/w/${iconD4}.png`
     const iconURL5 = `http://openweathermap.org/img/w/${iconD5}.png`
 
+    // Creating a universal date/time variable for each day to be displayed nicely from the JSON time-date stamp.
     const DATE_OPTIONS = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
     return (
         <div>
+            {/* Using Logical && Operators to get the component to display all at once for the 5-day forecast */}
             {props.city && <h4 className="directions">Carl's 5-Day Weather Forecast for: <br /><span className="directions-city">{props.city}, </span><span className="directions-city">{props.country}</span></h4>}
             {props.country && <div className="col-xs-12 weather-list">
                 <div className="weather-item">
@@ -56,10 +58,8 @@ const WeatherForecast = (props) => {
                     {props.dayFive.temp && <h5 className="temps">{props.dayFive.temp} °F</h5>}
                     {props.dayFive.humidity && <h5>Humidity: {props.dayFive.humidity}</h5>}
                 </div>
-            </div>}
-
-
-
+            </div>
+            }
         </div>
     )
 }
