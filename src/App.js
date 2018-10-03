@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
-
 import Headers from "./components/Headers";
 import WeatherInputForm from './components/WeatherInputForm';
 import WeatherForecast from './components/WeatherForecast';
@@ -96,21 +94,46 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Headers />
-        <WeatherInputForm fiveDayForecast={this.fiveDayForecast} />
-        <WeatherForecast
-          city={this.state.city}
-          country={this.state.country}
-          dayOne={this.state.dayOne}
-          dayTwo={this.state.dayTwo}
-          dayThree={this.state.dayThree}
-          dayFour={this.state.dayFour}
-          dayFive={this.state.dayFive}
-          error={this.state.error}
-        />
+        <div className="main">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-6 headers-container">
+                <Headers />
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-10 fiveDayForecastInput-container">
+              <WeatherInputForm fiveDayForecast={this.fiveDayForecast} />
+            </div>
+          </div>
+        </div><br />
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-10 weatherForecast-container">
+              <WeatherForecast
+                city={this.state.city}
+                country={this.state.country}
+                dayOne={this.state.dayOne}
+                dayTwo={this.state.dayTwo}
+                dayThree={this.state.dayThree}
+                dayFour={this.state.dayFour}
+                dayFive={this.state.dayFive}
+                error={this.state.error}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
+
+
+
+
 
 export default App;
