@@ -1,7 +1,7 @@
 Buildit Junior Front End Developer (Trainee) exercise request - Alexandre J. Dohrmann
 
 1.  How to build and run your creation
-I built my project (called "Carl Weathers" as a funny spin on the actor's name but using a cute character I designed, an owl named "Carl") using "React". Since this position is for a junior front-end developer and I believe the teams use React in some capactiy, I wanted to show some of the skills I've learned in order to complete this project.
+I built my project (called "Carl Weathers" as a funny spin on the actor's name but using a cute character I designed, an owl named "Carl") using "React". Since this position is for a junior front-end developer and I believe the teams use React in some capacity, I wanted to show some of the skills I've learned in order to complete this project.
 
 2.  Your thought process when creating the solution
 My thought process in creating this solution was to have the easiest, 1-page solution for a user to check the weather in a given place around the world. They could punch in their (City, State) and (Country) to get a 5-day snapshot of the weather for that city. In pulling in the API from OpenWeatherMap, I thought the most relevant pieces of information (that were available) were:
@@ -19,12 +19,12 @@ I also wanted to create something that was fun (visually) and not just the usual
 I definitely traded some things like conditional statements and logic to make the app as simple as possible. I would have loved to include more of these to show different colors for various temperatures and maybe display a clothing item that is good to have for that temperature, etc.
 
 4. Anything you might implement with more time (features, fixes, technical debt corrections, etc)
-I would have loved to have more time create a better experience across devices (Mobile, Tablet) using better bootstrap/grid/media-queries to enhance the user experience. I would have also loved to add react routes to have a description page of the App and maybe additional route to describe the various weather patterns in the given 5-day forecast.
+I would have loved to have more time creating a better experience across devices (Mobile, Tablet) using better bootstrap/grid/media-queries to enhance the user experience. I would have also loved to add react routes to have a description page of the App and maybe additional routes to describe the various weather patterns in the given 5-day forecast.
 I think I would've been able to complete more given another 1-2 days. I was unfortunately robbed on Monday 10/1 and had all of my belongs stolen (laptop, passport, money, credit cards, car keys, etc.) so I spent a whole day getting a replacement laptop, doing an install-fest, and trying to recover as much as I could. :(
 
 5. The only thing needed to install and run this project would be an "npm install" in your command line. If needed you can "npm install react" as well as "npm install bootstrap".
 
-6.  My Github repository can be acessed here: https://github.com/alexandre-dohrmann/Carl-Weathers
+6.  My Github repository can be accessed here: https://github.com/alexandre-dohrmann/Carl-Weathers
 
 7.  The public link for this has been deployed on Heroku at: https://carl-weathers.herokuapp.com/
 
